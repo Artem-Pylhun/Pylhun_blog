@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Blog\Admin\CategoryController;
 use App\Http\Controllers\Blog\PostController;
+use App\Http\Controllers\Blog\Admin\PostController as PostCont;
 use App\Http\Controllers\RestTestController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,8 @@ Route::group($groupData, function () {
     Route::resource('categories', CategoryController::class)
         ->only($methods)
         ->names('blog.admin.categories');
+    //BlogPost
+    Route::resource('posts', PostCont::class)
+        ->except(['show'])                               //не робити маршрут для метода show
+        ->names('blog.admin.posts');
 });
