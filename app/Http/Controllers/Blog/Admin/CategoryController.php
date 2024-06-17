@@ -1,11 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Blog\Admin;
-
-//use App\Http\Controllers\Controller;
 use App\Models\BlogCategory;
 use App\Repositories\BlogCategoryRepository;
-use Illuminate\Support\Str;
 use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 

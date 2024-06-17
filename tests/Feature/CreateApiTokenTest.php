@@ -29,4 +29,4 @@ test('api tokens can be created', function () {
         ->can('delete')->toBeFalse();
 })->skip(function () {
     return ! Features::hasApiFeatures();
-}, 'API support is not enabled.');
+}, 'Api support is not enabled.');

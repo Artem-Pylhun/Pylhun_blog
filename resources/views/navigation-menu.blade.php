@@ -104,7 +104,7 @@
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
-                                    {{ __('API Tokens') }}
+                                    {{ __('Api Tokens') }}
                                 </x-dropdown-link>
                             @endif
 
@@ -167,7 +167,7 @@
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                     <x-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
-                        {{ __('API Tokens') }}
+                        {{ __('Api Tokens') }}
                     </x-responsive-nav-link>
                 @endif
 
