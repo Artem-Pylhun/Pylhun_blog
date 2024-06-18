@@ -13,11 +13,15 @@ class CategoryController extends BaseController
      */
     public function index()
     {
-        $posts = BlogCategory::with('parentCategory')->get();
+        $posts = BlogCategory::with('parentCategory')->paginate(5);
 
         return $posts;
     }
-
+    public function getForComboBox()
+    {
+        $posts = BlogCategory::with('parentCategory')->get();
+        return $posts;
+    }
     /**
      * Show the form for creating a new resource.
      */

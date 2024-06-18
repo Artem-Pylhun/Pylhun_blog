@@ -15,8 +15,13 @@ class PostController extends BaseController
     public function index()
     {
 
-        $posts = BlogPost::with(['user', 'category'])->get();
+        $posts = BlogPost::with(['user', 'category'])->paginate(5);
 
+        return $posts;
+    }
+    public function get()
+    {
+        $posts = BlogPost::with(['user', 'category'])->get();
         return $posts;
     }
 
